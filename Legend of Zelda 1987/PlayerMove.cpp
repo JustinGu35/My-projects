@@ -28,6 +28,8 @@ PlayerMove::PlayerMove(class Actor* owner)
 void PlayerMove::Update(float deltaTime)
 {
     Vector2 tempPos=mOwner->GetPosition();
+    Game* myGame=mOwner->GetGame();
+    AnimatedSprite* myAS=mOwner->GetComponent<AnimatedSprite>();
     
     Vector2 offset(0.0,0.0);
     
@@ -37,10 +39,10 @@ void PlayerMove::Update(float deltaTime)
         if(attacking==false)
         {
             attacking=true;
-            Mix_PlayChannel(-1,mOwner->GetGame()->GetSound("Assets/Sounds/SwordSlash.wav"),0);
+            Mix_PlayChannel(-1,myGame->GetSound("Assets/Sounds/SwordSlash.wav"),0);
             UpdateSword();
         }
-        std::vector<Actor*> tempE=mOwner->GetGame()->GetEnemies(mOwner->GetGame()->getRoom());
+        std::vector<Actor*> tempE=myGame->GetEnemies(mOwner->GetGame()->getRoom());
         for(auto enemy: tempE)
         {
             CollSide tempState=mSword->GetComponent<CollisionComponent>()->GetMinOverlap
@@ -54,7 +56,7 @@ void PlayerMove::Update(float deltaTime)
                     (enemy->GetComponent<CollisionComponent>(),offset);
                 if(contact!=CollSide::None)
                 {
-                    mOwner->GetGame()->mPlayer->TakeDamage(enemy->GetComponent<EnemyComponent>()->getDamage());
+                    myGame->mPlayer->TakeDamage(enemy->GetComponent<EnemyComponent>()->getDamage());
                     tempPos+=offset;
                     if(contact==CollSide::Top)
                     {
@@ -94,23 +96,23 @@ void PlayerMove::Update(float deltaTime)
             mOwner->SetPosition(tempPos);
             if(facing==0)
             {
-                mOwner->GetComponent<AnimatedSprite>()->SetAnimation("walkUp");
-                mOwner->GetComponent<AnimatedSprite>()->SetIsPaused(false);
+                myAS->SetAnimation("walkUp");
+                myAS->SetIsPaused(false);
             }
             else if(facing==1)
             {
-                mOwner->GetComponent<AnimatedSprite>()->SetAnimation("walkLeft");
-                mOwner->GetComponent<AnimatedSprite>()->SetIsPaused(false);
+                myAS->SetAnimation("walkLeft");
+                myAS->SetIsPaused(false);
             }
             else if(facing==2)
             {
-                mOwner->GetComponent<AnimatedSprite>()->SetAnimation("walkDown");
-                mOwner->GetComponent<AnimatedSprite>()->SetIsPaused(false);
+                myAS->SetAnimation("walkDown");
+                myAS->SetIsPaused(false);
             }
             else
             {
-                mOwner->GetComponent<AnimatedSprite>()->SetAnimation("walkRight");
-                mOwner->GetComponent<AnimatedSprite>()->SetIsPaused(false);
+                myAS->SetAnimation("walkRight");
+                myAS->SetIsPaused(false);
             }
         }
         
@@ -124,7 +126,7 @@ void PlayerMove::Update(float deltaTime)
                  (enemy->GetComponent<CollisionComponent>(),offset);
              if(contact!=CollSide::None)
              {
-                 mOwner->GetGame()->mPlayer->TakeDamage(enemy->GetComponent<EnemyComponent>()->getDamage());
+                 myGame->mPlayer->TakeDamage(enemy->GetComponent<EnemyComponent>()->getDamage());
                  tempPos+=offset;
                  if(contact==CollSide::Top)
                  {
@@ -150,9 +152,9 @@ void PlayerMove::Update(float deltaTime)
     
     
     // for doors
-    std::unordered_map<std::string,std::vector<Door*>>::iterator itD=mOwner->GetGame()->mDoors.find(mOwner->GetGame()->getRoom());
+    std::unordered_map<std::string,std::vector<Door*>>::iterator itD=myGame->mDoors.find(mOwner->GetGame()->getRoom());
     std::vector<Door*> tempD;
-    if(itD!=mOwner->GetGame()->mDoors.end())
+    if(itD!=myGame->mDoors.end())
     {
         tempD=itD->second;
     }
@@ -169,9 +171,9 @@ void PlayerMove::Update(float deltaTime)
             {
                 if(mDoor->getState()=="Open")
                 {
-                    mOwner->GetGame()->setRoom(mDoor->getDestination());
-                    auto it=mOwner->GetGame()->mSpawners.find(mDoor->getDestination());
-                    if(it!=mOwner->GetGame()->mSpawners.end())
+                    myGame->setRoom(mDoor->getDestination());
+                    auto it=myGame->mSpawners.find(mDoor->getDestination());
+                    if(it!=myGame->mSpawners.end())
                     {
                         std::vector<Spawner*> tempS=it->second;
                         for(auto mSpawner : tempS)
@@ -183,12 +185,12 @@ void PlayerMove::Update(float deltaTime)
                 }
                 else if(mDoor->getState()=="Locked")
                 {
-                    int tempKey=mOwner->GetGame()->mPlayer->GetKey();
+                    int tempKey=myGame->mPlayer->GetKey();
                     if(tempKey>0)
                     {
-                        mOwner->GetGame()->mPlayer->RemoveKey();
+                        myGame->mPlayer->RemoveKey();
                         mDoor->UpdateTexture(mDoor->getDirection(),"Open");
-                        Mix_PlayChannel(-1,mOwner->GetGame()->GetSound("Assets/Sounds/DoorOpen.wav"),0);
+                        Mix_PlayChannel(-1,myGame->GetSound("Assets/Sounds/DoorOpen.wav"),0);
                     }
                 }
                 break;
@@ -197,9 +199,9 @@ void PlayerMove::Update(float deltaTime)
             {
                 if(mDoor->getState()=="Open")
                 {
-                    mOwner->GetGame()->setRoom(mDoor->getDestination());
-                    auto it=mOwner->GetGame()->mSpawners.find(mDoor->getDestination());
-                    if(it!=mOwner->GetGame()->mSpawners.end())
+                    myGame->setRoom(mDoor->getDestination());
+                    auto it=myGame->mSpawners.find(mDoor->getDestination());
+                    if(it!=myGame->mSpawners.end())
                     {
                         std::vector<Spawner*> tempS=it->second;
                         for(auto mSpawner : tempS)
@@ -211,12 +213,12 @@ void PlayerMove::Update(float deltaTime)
                 }
                 else if(mDoor->getState()=="Locked")
                 {
-                    int tempKey=mOwner->GetGame()->mPlayer->GetKey();
+                    int tempKey=myGame->mPlayer->GetKey();
                     if(tempKey>0)
                     {
-                        mOwner->GetGame()->mPlayer->RemoveKey();
+                        myGame->mPlayer->RemoveKey();
                         mDoor->UpdateTexture(mDoor->getDirection(),"Open");
-                        Mix_PlayChannel(-1,mOwner->GetGame()->GetSound("Assets/Sounds/DoorOpen.wav"),0);
+                        Mix_PlayChannel(-1,myGame->GetSound("Assets/Sounds/DoorOpen.wav"),0);
                     }
                 }
                 break;
@@ -225,9 +227,9 @@ void PlayerMove::Update(float deltaTime)
             {
                 if(mDoor->getState()=="Open")
                 {
-                    mOwner->GetGame()->setRoom(mDoor->getDestination());
-                    auto it=mOwner->GetGame()->mSpawners.find(mDoor->getDestination());
-                    if(it!=mOwner->GetGame()->mSpawners.end())
+                    myGame->setRoom(mDoor->getDestination());
+                    auto it=myGame->mSpawners.find(mDoor->getDestination());
+                    if(it!=myGame->mSpawners.end())
                     {
                         std::vector<Spawner*> tempS=it->second;
                         for(auto mSpawner : tempS)
@@ -239,12 +241,12 @@ void PlayerMove::Update(float deltaTime)
                 }
                 else if(mDoor->getState()=="Locked")
                 {
-                    int tempKey=mOwner->GetGame()->mPlayer->GetKey();
+                    int tempKey=myGame->mPlayer->GetKey();
                     if(tempKey>0)
                     {
-                        mOwner->GetGame()->mPlayer->RemoveKey();
+                        myGame->mPlayer->RemoveKey();
                         mDoor->UpdateTexture(mDoor->getDirection(),"Open");
-                        Mix_PlayChannel(-1,mOwner->GetGame()->GetSound("Assets/Sounds/DoorOpen.wav"),0);
+                        Mix_PlayChannel(-1,myGame->GetSound("Assets/Sounds/DoorOpen.wav"),0);
                     }
                 }
                 break;
@@ -253,9 +255,9 @@ void PlayerMove::Update(float deltaTime)
             {
                 if(mDoor->getState()=="Open")
                 {
-                    mOwner->GetGame()->setRoom(mDoor->getDestination());
-                    auto it=mOwner->GetGame()->mSpawners.find(mDoor->getDestination());
-                    if(it!=mOwner->GetGame()->mSpawners.end())
+                    myGame->setRoom(mDoor->getDestination());
+                    auto it=myGame->mSpawners.find(mDoor->getDestination());
+                    if(it!=myGame->mSpawners.end())
                     {
                         std::vector<Spawner*> tempS=it->second;
                         for(auto mSpawner : tempS)
@@ -267,12 +269,12 @@ void PlayerMove::Update(float deltaTime)
                 }
                 else if(mDoor->getState()=="Locked")
                 {
-                    int tempKey=mOwner->GetGame()->mPlayer->GetKey();
+                    int tempKey=myGame->mPlayer->GetKey();
                     if(tempKey>0)
                     {
-                        mOwner->GetGame()->mPlayer->RemoveKey();
+                        myGame->mPlayer->RemoveKey();
                         mDoor->UpdateTexture(mDoor->getDirection(),"Open");
-                        Mix_PlayChannel(-1,mOwner->GetGame()->GetSound("Assets/Sounds/DoorOpen.wav"),0);
+                        Mix_PlayChannel(-1,myGame->GetSound("Assets/Sounds/DoorOpen.wav"),0);
                     }
                 }
                 break;
@@ -290,9 +292,9 @@ void PlayerMove::Update(float deltaTime)
     //for the secret block
     //
     //
-    std::unordered_map<std::string,std::vector<SecretBlock*>>::iterator itSB=mOwner->GetGame()->mSecretBlocks.find(mOwner->GetGame()->getRoom());
+    std::unordered_map<std::string,std::vector<SecretBlock*>>::iterator itSB=myGame->mSecretBlocks.find(mOwner->GetGame()->getRoom());
     std::vector<SecretBlock*> tempSB;
-    if(itSB!=mOwner->GetGame()->mSecretBlocks.end())
+    if(itSB!=myGame->mSecretBlocks.end())
     {
         tempSB=itSB->second;
     }
@@ -320,15 +322,15 @@ void PlayerMove::Update(float deltaTime)
                         float difference=BlockPos.x-(originalPosition.x+TILE_WIDTH);
                         BlockPos.x-=difference;
                         tempPos.x-=difference;
-                        Mix_PlayChannel(-1,mOwner->GetGame()->GetSound("Assets/Sounds/Secret.wav"),0);
-                        auto it=mOwner->GetGame()->mDoors.find(mOwner->GetGame()->getRoom());
+                        Mix_PlayChannel(-1,myGame->GetSound("Assets/Sounds/Secret.wav"),0);
+                        auto it=myGame->mDoors.find(myGame->getRoom());
                         std::vector<Door*> tempDoors=it->second;
                         for(auto door : tempDoors)
                         {
                             if(door->getState()=="Closed")
                             {
                                 door->UpdateTexture(door->getDirection(),"Open");
-                                Mix_PlayChannel(-1,mOwner->GetGame()->GetSound("Assets/Sounds/DoorOpen.wav"),0);
+                                Mix_PlayChannel(-1,myGame->GetSound("Assets/Sounds/DoorOpen.wav"),0);
                             }
                         }
                     }
@@ -350,15 +352,15 @@ void PlayerMove::Update(float deltaTime)
                         float difference=BlockPos.x-(originalPosition.x-TILE_WIDTH);
                         BlockPos.x-=difference;
                         tempPos.x-=difference;
-                        Mix_PlayChannel(-1,mOwner->GetGame()->GetSound("Assets/Sounds/Secret.wav"),0);
-                        auto it=mOwner->GetGame()->mDoors.find(mOwner->GetGame()->getRoom());
+                        Mix_PlayChannel(-1,myGame->GetSound("Assets/Sounds/Secret.wav"),0);
+                        auto it=myGame->mDoors.find(myGame->getRoom());
                         std::vector<Door*> tempDoors=it->second;
                         for(auto door : tempDoors)
                         {
                             if(door->getState()=="Closed")
                             {
                                 door->UpdateTexture(door->getDirection(),"Open");
-                                Mix_PlayChannel(-1,mOwner->GetGame()->GetSound("Assets/Sounds/DoorOpen.wav"),0);
+                                Mix_PlayChannel(-1,myGame->GetSound("Assets/Sounds/DoorOpen.wav"),0);
                             }
                         }
                     }
@@ -380,15 +382,15 @@ void PlayerMove::Update(float deltaTime)
                         float difference=BlockPos.y-(originalPosition.y+TILE_WIDTH);
                         BlockPos.y-=difference;
                         tempPos.y-=difference;
-                        Mix_PlayChannel(-1,mOwner->GetGame()->GetSound("Assets/Sounds/Secret.wav"),0);
-                        auto it=mOwner->GetGame()->mDoors.find(mOwner->GetGame()->getRoom());
+                        Mix_PlayChannel(-1,myGame->GetSound("Assets/Sounds/Secret.wav"),0);
+                        auto it=myGame->mDoors.find(myGame->getRoom());
                         std::vector<Door*> tempDoors=it->second;
                         for(auto door : tempDoors)
                         {
                             if(door->getState()=="Closed")
                             {
                                 door->UpdateTexture(door->getDirection(),"Open");
-                                Mix_PlayChannel(-1,mOwner->GetGame()->GetSound("Assets/Sounds/DoorOpen.wav"),0);
+                                Mix_PlayChannel(-1,myGame->GetSound("Assets/Sounds/DoorOpen.wav"),0);
                             }
                         }
                     }
@@ -409,15 +411,15 @@ void PlayerMove::Update(float deltaTime)
                         float difference=BlockPos.y-(originalPosition.y-TILE_WIDTH);
                         BlockPos.y-=difference;
                         tempPos.y-=difference;
-                        Mix_PlayChannel(-1,mOwner->GetGame()->GetSound("Assets/Sounds/Secret.wav"),0);
-                        auto it=mOwner->GetGame()->mDoors.find(mOwner->GetGame()->getRoom());
+                        Mix_PlayChannel(-1,myGame->GetSound("Assets/Sounds/Secret.wav"),0);
+                        auto it=myGame->mDoors.find(myGame->getRoom());
                         std::vector<Door*> tempDoors=it->second;
                         for(auto door : tempDoors)
                         {
                             if(door->getState()=="Closed")
                             {
                                 door->UpdateTexture(door->getDirection(),"Open");
-                                Mix_PlayChannel(-1,mOwner->GetGame()->GetSound("Assets/Sounds/DoorOpen.wav"),0);
+                                Mix_PlayChannel(-1,myGame->GetSound("Assets/Sounds/DoorOpen.wav"),0);
                             }
                         }
                     }
@@ -435,7 +437,7 @@ void PlayerMove::Update(float deltaTime)
     for(int i=0;i<mOwner->GetGame()->mColliders.size();i++)
     {
         CollSide tempState=mOwner->GetComponent<CollisionComponent>()->GetMinOverlap
-                        (mOwner->GetGame()->mColliders[i]->mCC,offset);
+                        (myGame->mColliders[i]->mCC,offset);
         if(tempState!=CollSide::None)
         {
             tempPos+=offset;
@@ -446,10 +448,10 @@ void PlayerMove::Update(float deltaTime)
     
     tempPos=mOwner->GetPosition();
     //adjust for camera
-    tempPos.x-=mOwner->GetGame()->WINDOW_WIDTH/2;
-    tempPos.y-=mOwner->GetGame()->WINDOW_HEIGHT/2;
-    mOwner->GetGame()->camera.x=tempPos.x;
-    mOwner->GetGame()->camera.y=tempPos.y;
+    tempPos.x-=myGame->WINDOW_WIDTH/2;
+    tempPos.y-=myGame->WINDOW_HEIGHT/2;
+    myGame->camera.x=tempPos.x;
+    myGame->camera.y=tempPos.y;
     
 }
 void PlayerMove::ProcessInput(const Uint8* keyState)
@@ -537,6 +539,7 @@ void PlayerMove::ProcessInput(const Uint8* keyState)
 
 void PlayerMove::UpdateSword()
 {
+    
     if(attacking==false)
     {
         mSword->getSprite()->SetIsVisible(false);

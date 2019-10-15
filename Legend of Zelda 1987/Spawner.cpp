@@ -16,7 +16,15 @@ Spawner::Spawner(class Game* inGame)
 }
 Spawner::~Spawner()
 {
-    
+    std::unordered_map<std::string, std::vector<class Spawner*> >::iterator it=mGame->mSpawners.find(mGame->getRoom());
+    if(it!=mGame->mSpawners.end())
+    {
+        std::vector<Spawner*>::iterator it2=std::find(it->second.begin(),it->second.end(),this);
+        if(it2!=it->second.end())
+        {
+            it->second.erase(it2);
+        }
+    }
 }
 
 void Spawner::activate()
