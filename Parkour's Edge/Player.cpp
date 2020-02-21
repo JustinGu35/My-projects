@@ -5,6 +5,7 @@
 #include "CollisionComponent.h"
 #include "PlayerMove.h"
 #include "CameraComponent.h"
+#include "HUD.h"
 
 
 Player::Player(Game* inGame,Actor* parent)
@@ -14,5 +15,5 @@ Player::Player(Game* inGame,Actor* parent)
     mCaC=new CameraComponent(this);
     mCC=new CollisionComponent(this);
     mCC->SetSize(50,175,50);
-    
+    mHUD=new HUD(this);
 }

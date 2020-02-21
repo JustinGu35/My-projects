@@ -4,6 +4,7 @@
 #include "Renderer.h"
 #include "CollisionComponent.h"
 #include "Player.h"
+#include "HUD.h"
 
 Coin::Coin(Game* inGame, Actor* parent)
 :Actor(inGame,parent)
@@ -21,5 +22,6 @@ void Coin::OnUpdate(float deltaTime)
     {
         SetState(ActorState::Destroy);
         Mix_PlayChannel(-1,mGame->GetSound("Assets/Sounds/Coin.wav"),0);
+        mGame->GetPlayer()->GetComponent<HUD>()->addCoin();
     }
 }

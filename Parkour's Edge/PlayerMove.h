@@ -53,5 +53,6 @@ private:
     CollSide collidingSide;
     
     int mRunningSFX;
+    
 };
 

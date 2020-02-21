@@ -13,6 +13,8 @@ SecurityCamera::SecurityCamera(Game* inGame, Actor* parent)
     mSC=new SecurityCone(inGame,this);
     mQuaternion=startQ;
     mChild=dynamic_cast<SecurityCone*>(mChildren[0]);
+    
+    mGame->AddSecurityCamera(this);
 }
 
 SecurityCamera::~SecurityCamera()
@@ -21,6 +23,7 @@ SecurityCamera::~SecurityCamera()
     {
         Mix_HaltChannel(CameraRotate);
     }
+    mGame->RemoveSecurityCamera(this);
 }
 
 void SecurityCamera::OnUpdate(float deltaTime)

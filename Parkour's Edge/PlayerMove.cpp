@@ -7,6 +7,8 @@
 #include "CameraComponent.h"
 #include "Player.h"
 #include "Checkpoint.h"
+#include "HUD.h"
+
 
 PlayerMove::PlayerMove(Actor* inOwner)
 :MoveComponent(inOwner)
@@ -19,6 +21,7 @@ PlayerMove::PlayerMove(Actor* inOwner)
     ChangeState(MoveState::Falling);
     mRunningSFX=Mix_PlayChannel(-1,mOwner->GetGame()->GetSound("Assets/Sounds/Running.wav"),-1);
     Mix_Pause(mRunningSFX);
+   
 }
 
 PlayerMove::~PlayerMove()
@@ -58,6 +61,13 @@ void PlayerMove::Update(float deltaTime)
                 mGame->SetNextLevel(level);
             }
             mGame->mCheckpoints.front()->SetState(ActorState::Destroy);
+            if(!mGame->mCheckpoints.front()->GetText().empty())
+            {
+                mGame->SetDisplayText(mGame->mCheckpoints.front()->GetText());
+                mGame->SetTextTimer(0.0f);
+                dynamic_cast<Player*>(mOwner)->GetComponent<HUD>()->ChangeTextTexture();
+            }
+            
             Mix_PlayChannel(-1,mOwner->GetGame()->GetSound("Assets/Sounds/Checkpoint.wav"),0);
             mGame->mCheckpoints.pop();
             if(!mGame->mCheckpoints.empty())

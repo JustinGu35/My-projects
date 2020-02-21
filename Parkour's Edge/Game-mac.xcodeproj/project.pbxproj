@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9210C6AB21DC115600C3E613 /* UIComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9210C6AA21DC115500C3E613 /* UIComponent.cpp */; };
+		9210C6AE21DC117200C3E613 /* UIComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9210C6AD21DC117200C3E613 /* UIComponent.cpp */; };
 		924722A91EF72947000B58FD /* Actor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 924722A11EF72947000B58FD /* Actor.cpp */; };
 		924722AA1EF72947000B58FD /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 924722A31EF72947000B58FD /* Component.cpp */; };
 		924722AB1EF72947000B58FD /* Math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 924722A51EF72947000B58FD /* Math.cpp */; };
@@ -21,27 +21,29 @@
 		928A32D91F97158D00E04B24 /* MeshComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 928A32D01F97158D00E04B24 /* MeshComponent.cpp */; };
 		92924F991EDF6AC900A740A7 /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92924F981EDF6AC900A740A7 /* Main.cpp */; };
 		92924F9C1EDF6DC800A740A7 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92924F9A1EDF6DC800A740A7 /* Game.cpp */; };
-		92B401B0223F2925004DD285 /* SegmentCast.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92B401AE223F2924004DD285 /* SegmentCast.cpp */; };
-		92B401B1223F2925004DD285 /* Random.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92B401AF223F2925004DD285 /* Random.cpp */; };
+		92B401B6223F2943004DD285 /* Random.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92B401B2223F2943004DD285 /* Random.cpp */; };
+		92B401B7223F2943004DD285 /* SegmentCast.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92B401B5223F2943004DD285 /* SegmentCast.cpp */; };
 		92D324FD1B697428005A86C7 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D324FC1B697428005A86C7 /* CoreFoundation.framework */; };
 		92E32AAC1F9D67450091853F /* LevelLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92E32AAA1F9D67450091853F /* LevelLoader.cpp */; };
 		92E46E941B6353E50035CD21 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E46E931B6353E50035CD21 /* OpenGL.framework */; };
-		EFCAE568238754A100A29102 /* PlayerMove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE55C2387549F00A29102 /* PlayerMove.cpp */; };
-		EFCAE569238754A100A29102 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE55D238754A000A29102 /* Player.cpp */; };
-		EFCAE56A238754A100A29102 /* LaserMine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE55F238754A000A29102 /* LaserMine.cpp */; };
-		EFCAE56B238754A100A29102 /* Block.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE561238754A000A29102 /* Block.cpp */; };
-		EFCAE56C238754A100A29102 /* CameraComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE562238754A000A29102 /* CameraComponent.cpp */; };
-		EFCAE56D238754A100A29102 /* LaserComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE564238754A000A29102 /* LaserComponent.cpp */; };
-		EFCAE56F23875D5700A29102 /* Checkpoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE56E23875D5700A29102 /* Checkpoint.cpp */; };
-		EFCAE5722387696400A29102 /* Arrow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE5712387696400A29102 /* Arrow.cpp */; };
-		EFCAE5752387775C00A29102 /* Coin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE5742387775C00A29102 /* Coin.cpp */; };
-		EFCAE578238C843E00A29102 /* SecurityCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE577238C843E00A29102 /* SecurityCamera.cpp */; };
-		EFCAE57B238C864600A29102 /* SecurityCone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE57A238C864600A29102 /* SecurityCone.cpp */; };
+		92F7A9301FB806050057BFBD /* Font.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 92F7A92C1FB806040057BFBD /* Font.cpp */; };
+		EFCAE5932396239D00A29102 /* SecurityCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE57F2396239A00A29102 /* SecurityCamera.cpp */; };
+		EFCAE5942396239D00A29102 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE5812396239B00A29102 /* Player.cpp */; };
+		EFCAE5952396239D00A29102 /* Arrow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE5832396239B00A29102 /* Arrow.cpp */; };
+		EFCAE5962396239D00A29102 /* Block.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE5842396239B00A29102 /* Block.cpp */; };
+		EFCAE5972396239D00A29102 /* LaserComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE5882396239B00A29102 /* LaserComponent.cpp */; };
+		EFCAE5982396239D00A29102 /* Coin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE5892396239B00A29102 /* Coin.cpp */; };
+		EFCAE5992396239D00A29102 /* SecurityCone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE58A2396239C00A29102 /* SecurityCone.cpp */; };
+		EFCAE59A2396239D00A29102 /* LaserMine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE58C2396239C00A29102 /* LaserMine.cpp */; };
+		EFCAE59B2396239D00A29102 /* PlayerMove.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE58D2396239C00A29102 /* PlayerMove.cpp */; };
+		EFCAE59C2396239D00A29102 /* Checkpoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE58E2396239C00A29102 /* Checkpoint.cpp */; };
+		EFCAE59D2396239D00A29102 /* CameraComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE5912396239D00A29102 /* CameraComponent.cpp */; };
+		EFCAE59F2396282900A29102 /* HUD.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE59E2396282900A29102 /* HUD.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9210C6A921DC115500C3E613 /* UIComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIComponent.h; sourceTree = "<group>"; };
-		9210C6AA21DC115500C3E613 /* UIComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UIComponent.cpp; sourceTree = "<group>"; };
+		9210C6AC21DC117200C3E613 /* UIComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIComponent.h; sourceTree = "<group>"; };
+		9210C6AD21DC117200C3E613 /* UIComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UIComponent.cpp; sourceTree = "<group>"; };
 		924722A11EF72947000B58FD /* Actor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Actor.cpp; sourceTree = "<group>"; };
 		924722A21EF72947000B58FD /* Actor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Actor.h; sourceTree = "<group>"; };
 		924722A31EF72947000B58FD /* Component.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Component.cpp; sourceTree = "<group>"; };
@@ -68,37 +70,41 @@
 		92924F981EDF6AC900A740A7 /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
 		92924F9A1EDF6DC800A740A7 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
 		92924F9B1EDF6DC800A740A7 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
-		92B401AC223F2924004DD285 /* SegmentCast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentCast.h; sourceTree = "<group>"; };
-		92B401AD223F2924004DD285 /* Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Random.h; sourceTree = "<group>"; };
-		92B401AE223F2924004DD285 /* SegmentCast.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SegmentCast.cpp; sourceTree = "<group>"; };
-		92B401AF223F2925004DD285 /* Random.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Random.cpp; sourceTree = "<group>"; };
+		92B401B2223F2943004DD285 /* Random.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Random.cpp; sourceTree = "<group>"; };
+		92B401B3223F2943004DD285 /* Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Random.h; sourceTree = "<group>"; };
+		92B401B4223F2943004DD285 /* SegmentCast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentCast.h; sourceTree = "<group>"; };
+		92B401B5223F2943004DD285 /* SegmentCast.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SegmentCast.cpp; sourceTree = "<group>"; };
 		92D324FC1B697428005A86C7 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		92E32AAA1F9D67450091853F /* LevelLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LevelLoader.cpp; sourceTree = "<group>"; };
 		92E32AAB1F9D67450091853F /* LevelLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelLoader.h; sourceTree = "<group>"; };
 		92E46DF71B634EA30035CD21 /* Game-mac */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Game-mac"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E46E931B6353E50035CD21 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
-		EFCAE55C2387549F00A29102 /* PlayerMove.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerMove.cpp; sourceTree = "<group>"; };
-		EFCAE55D238754A000A29102 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
-		EFCAE55E238754A000A29102 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
-		EFCAE55F238754A000A29102 /* LaserMine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LaserMine.cpp; sourceTree = "<group>"; };
-		EFCAE560238754A000A29102 /* CameraComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraComponent.h; sourceTree = "<group>"; };
-		EFCAE561238754A000A29102 /* Block.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Block.cpp; sourceTree = "<group>"; };
-		EFCAE562238754A000A29102 /* CameraComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CameraComponent.cpp; sourceTree = "<group>"; };
-		EFCAE563238754A000A29102 /* LaserComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaserComponent.h; sourceTree = "<group>"; };
-		EFCAE564238754A000A29102 /* LaserComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LaserComponent.cpp; sourceTree = "<group>"; };
-		EFCAE565238754A000A29102 /* LaserMine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaserMine.h; sourceTree = "<group>"; };
-		EFCAE566238754A000A29102 /* Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
-		EFCAE567238754A000A29102 /* PlayerMove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerMove.h; sourceTree = "<group>"; };
-		EFCAE56E23875D5700A29102 /* Checkpoint.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Checkpoint.cpp; sourceTree = "<group>"; };
-		EFCAE57023875D6400A29102 /* Checkpoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Checkpoint.h; sourceTree = "<group>"; };
-		EFCAE5712387696400A29102 /* Arrow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Arrow.cpp; sourceTree = "<group>"; };
-		EFCAE5732387697200A29102 /* Arrow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Arrow.h; sourceTree = "<group>"; };
-		EFCAE5742387775C00A29102 /* Coin.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Coin.cpp; sourceTree = "<group>"; };
-		EFCAE5762387776600A29102 /* Coin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Coin.h; sourceTree = "<group>"; };
-		EFCAE577238C843E00A29102 /* SecurityCamera.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SecurityCamera.cpp; sourceTree = "<group>"; };
-		EFCAE579238C847C00A29102 /* SecurityCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecurityCamera.h; sourceTree = "<group>"; };
-		EFCAE57A238C864600A29102 /* SecurityCone.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SecurityCone.cpp; sourceTree = "<group>"; };
-		EFCAE57C238C866500A29102 /* SecurityCone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecurityCone.h; sourceTree = "<group>"; };
+		92F7A92C1FB806040057BFBD /* Font.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Font.cpp; sourceTree = "<group>"; };
+		92F7A92D1FB806050057BFBD /* Font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Font.h; sourceTree = "<group>"; };
+		EFCAE57D2396239A00A29102 /* SecurityCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityCamera.h; sourceTree = "<group>"; };
+		EFCAE57E2396239A00A29102 /* CameraComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraComponent.h; sourceTree = "<group>"; };
+		EFCAE57F2396239A00A29102 /* SecurityCamera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SecurityCamera.cpp; sourceTree = "<group>"; };
+		EFCAE5802396239A00A29102 /* Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
+		EFCAE5812396239B00A29102 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		EFCAE5822396239B00A29102 /* Coin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coin.h; sourceTree = "<group>"; };
+		EFCAE5832396239B00A29102 /* Arrow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Arrow.cpp; sourceTree = "<group>"; };
+		EFCAE5842396239B00A29102 /* Block.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Block.cpp; sourceTree = "<group>"; };
+		EFCAE5852396239B00A29102 /* Arrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arrow.h; sourceTree = "<group>"; };
+		EFCAE5862396239B00A29102 /* PlayerMove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerMove.h; sourceTree = "<group>"; };
+		EFCAE5872396239B00A29102 /* LaserComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaserComponent.h; sourceTree = "<group>"; };
+		EFCAE5882396239B00A29102 /* LaserComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LaserComponent.cpp; sourceTree = "<group>"; };
+		EFCAE5892396239B00A29102 /* Coin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Coin.cpp; sourceTree = "<group>"; };
+		EFCAE58A2396239C00A29102 /* SecurityCone.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SecurityCone.cpp; sourceTree = "<group>"; };
+		EFCAE58B2396239C00A29102 /* LaserMine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaserMine.h; sourceTree = "<group>"; };
+		EFCAE58C2396239C00A29102 /* LaserMine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LaserMine.cpp; sourceTree = "<group>"; };
+		EFCAE58D2396239C00A29102 /* PlayerMove.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerMove.cpp; sourceTree = "<group>"; };
+		EFCAE58E2396239C00A29102 /* Checkpoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Checkpoint.cpp; sourceTree = "<group>"; };
+		EFCAE58F2396239C00A29102 /* Checkpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Checkpoint.h; sourceTree = "<group>"; };
+		EFCAE5902396239C00A29102 /* SecurityCone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityCone.h; sourceTree = "<group>"; };
+		EFCAE5912396239D00A29102 /* CameraComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CameraComponent.cpp; sourceTree = "<group>"; };
+		EFCAE5922396239D00A29102 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		EFCAE59E2396282900A29102 /* HUD.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HUD.cpp; sourceTree = "<group>"; };
+		EFCAE5A02396283700A29102 /* HUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HUD.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,34 +123,38 @@
 		92E46DEE1B634EA30035CD21 = {
 			isa = PBXGroup;
 			children = (
-				EFCAE57C238C866500A29102 /* SecurityCone.h */,
-				EFCAE57A238C864600A29102 /* SecurityCone.cpp */,
-				EFCAE579238C847C00A29102 /* SecurityCamera.h */,
-				EFCAE577238C843E00A29102 /* SecurityCamera.cpp */,
-				EFCAE5762387776600A29102 /* Coin.h */,
-				EFCAE5742387775C00A29102 /* Coin.cpp */,
-				EFCAE5732387697200A29102 /* Arrow.h */,
-				EFCAE5712387696400A29102 /* Arrow.cpp */,
-				EFCAE57023875D6400A29102 /* Checkpoint.h */,
-				EFCAE56E23875D5700A29102 /* Checkpoint.cpp */,
-				EFCAE561238754A000A29102 /* Block.cpp */,
-				EFCAE566238754A000A29102 /* Block.h */,
-				EFCAE562238754A000A29102 /* CameraComponent.cpp */,
-				EFCAE560238754A000A29102 /* CameraComponent.h */,
-				EFCAE564238754A000A29102 /* LaserComponent.cpp */,
-				EFCAE563238754A000A29102 /* LaserComponent.h */,
-				EFCAE55F238754A000A29102 /* LaserMine.cpp */,
-				EFCAE565238754A000A29102 /* LaserMine.h */,
-				EFCAE55D238754A000A29102 /* Player.cpp */,
-				EFCAE55E238754A000A29102 /* Player.h */,
-				EFCAE55C2387549F00A29102 /* PlayerMove.cpp */,
-				EFCAE567238754A000A29102 /* PlayerMove.h */,
+				EFCAE5A02396283700A29102 /* HUD.h */,
+				EFCAE59E2396282900A29102 /* HUD.cpp */,
+				EFCAE5832396239B00A29102 /* Arrow.cpp */,
+				EFCAE5852396239B00A29102 /* Arrow.h */,
+				EFCAE5842396239B00A29102 /* Block.cpp */,
+				EFCAE5802396239A00A29102 /* Block.h */,
+				EFCAE5912396239D00A29102 /* CameraComponent.cpp */,
+				EFCAE57E2396239A00A29102 /* CameraComponent.h */,
+				EFCAE58E2396239C00A29102 /* Checkpoint.cpp */,
+				EFCAE58F2396239C00A29102 /* Checkpoint.h */,
+				EFCAE5892396239B00A29102 /* Coin.cpp */,
+				EFCAE5822396239B00A29102 /* Coin.h */,
+				EFCAE5882396239B00A29102 /* LaserComponent.cpp */,
+				EFCAE5872396239B00A29102 /* LaserComponent.h */,
+				EFCAE58C2396239C00A29102 /* LaserMine.cpp */,
+				EFCAE58B2396239C00A29102 /* LaserMine.h */,
+				EFCAE5812396239B00A29102 /* Player.cpp */,
+				EFCAE5922396239D00A29102 /* Player.h */,
+				EFCAE58D2396239C00A29102 /* PlayerMove.cpp */,
+				EFCAE5862396239B00A29102 /* PlayerMove.h */,
+				EFCAE57F2396239A00A29102 /* SecurityCamera.cpp */,
+				EFCAE57D2396239A00A29102 /* SecurityCamera.h */,
+				EFCAE58A2396239C00A29102 /* SecurityCone.cpp */,
+				EFCAE5902396239C00A29102 /* SecurityCone.h */,
 				924722A11EF72947000B58FD /* Actor.cpp */,
 				924722A21EF72947000B58FD /* Actor.h */,
 				924722BC1EF98571000B58FD /* CollisionComponent.cpp */,
 				924722BD1EF98571000B58FD /* CollisionComponent.h */,
 				924722A31EF72947000B58FD /* Component.cpp */,
 				924722A41EF72947000B58FD /* Component.h */,
+				92F7A92C1FB806040057BFBD /* Font.cpp */,
+				92F7A92D1FB806050057BFBD /* Font.h */,
 				92924F9A1EDF6DC800A740A7 /* Game.cpp */,
 				92924F9B1EDF6DC800A740A7 /* Game.h */,
 				92E32AAA1F9D67450091853F /* LevelLoader.cpp */,
@@ -158,18 +168,18 @@
 				928A32CF1F97158C00E04B24 /* MeshComponent.h */,
 				924722AD1EF89CAE000B58FD /* MoveComponent.cpp */,
 				924722AE1EF89CAE000B58FD /* MoveComponent.h */,
-				92B401AF223F2925004DD285 /* Random.cpp */,
-				92B401AD223F2924004DD285 /* Random.h */,
+				92B401B2223F2943004DD285 /* Random.cpp */,
+				92B401B3223F2943004DD285 /* Random.h */,
 				928A32CA1F97158C00E04B24 /* Renderer.cpp */,
 				928A32D21F97158D00E04B24 /* Renderer.h */,
-				92B401AE223F2924004DD285 /* SegmentCast.cpp */,
-				92B401AC223F2924004DD285 /* SegmentCast.h */,
+				92B401B5223F2943004DD285 /* SegmentCast.cpp */,
+				92B401B4223F2943004DD285 /* SegmentCast.h */,
 				928A32CB1F97158C00E04B24 /* Shader.cpp */,
 				928A32C81F97158C00E04B24 /* Shader.h */,
 				928A32C91F97158C00E04B24 /* Texture.cpp */,
 				928A32CD1F97158C00E04B24 /* Texture.h */,
-				9210C6AA21DC115500C3E613 /* UIComponent.cpp */,
-				9210C6A921DC115500C3E613 /* UIComponent.h */,
+				9210C6AD21DC117200C3E613 /* UIComponent.cpp */,
+				9210C6AC21DC117200C3E613 /* UIComponent.h */,
 				928A32CC1F97158C00E04B24 /* VertexArray.cpp */,
 				928A32CE1F97158C00E04B24 /* VertexArray.h */,
 				928A32D11F97158D00E04B24 /* Shaders */,
@@ -260,33 +270,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92F7A9301FB806050057BFBD /* Font.cpp in Sources */,
+				EFCAE5932396239D00A29102 /* SecurityCamera.cpp in Sources */,
+				9210C6AE21DC117200C3E613 /* UIComponent.cpp in Sources */,
+				EFCAE59D2396239D00A29102 /* CameraComponent.cpp in Sources */,
+				EFCAE59C2396239D00A29102 /* Checkpoint.cpp in Sources */,
 				924722A91EF72947000B58FD /* Actor.cpp in Sources */,
+				EFCAE5942396239D00A29102 /* Player.cpp in Sources */,
+				EFCAE5952396239D00A29102 /* Arrow.cpp in Sources */,
 				928A32D81F97158D00E04B24 /* VertexArray.cpp in Sources */,
-				EFCAE57B238C864600A29102 /* SecurityCone.cpp in Sources */,
+				EFCAE59F2396282900A29102 /* HUD.cpp in Sources */,
 				924722AA1EF72947000B58FD /* Component.cpp in Sources */,
 				928A32D91F97158D00E04B24 /* MeshComponent.cpp in Sources */,
+				EFCAE5962396239D00A29102 /* Block.cpp in Sources */,
+				EFCAE5972396239D00A29102 /* LaserComponent.cpp in Sources */,
+				92B401B7223F2943004DD285 /* SegmentCast.cpp in Sources */,
 				92924F991EDF6AC900A740A7 /* Main.cpp in Sources */,
 				928A32D51F97158D00E04B24 /* Texture.cpp in Sources */,
-				9210C6AB21DC115600C3E613 /* UIComponent.cpp in Sources */,
-				EFCAE56F23875D5700A29102 /* Checkpoint.cpp in Sources */,
-				EFCAE5752387775C00A29102 /* Coin.cpp in Sources */,
-				EFCAE5722387696400A29102 /* Arrow.cpp in Sources */,
 				924722AF1EF89CAE000B58FD /* MoveComponent.cpp in Sources */,
 				92924F9C1EDF6DC800A740A7 /* Game.cpp in Sources */,
 				928A32D61F97158D00E04B24 /* Renderer.cpp in Sources */,
-				EFCAE578238C843E00A29102 /* SecurityCamera.cpp in Sources */,
-				EFCAE56D238754A100A29102 /* LaserComponent.cpp in Sources */,
 				928A32D71F97158D00E04B24 /* Shader.cpp in Sources */,
+				EFCAE5982396239D00A29102 /* Coin.cpp in Sources */,
+				92B401B6223F2943004DD285 /* Random.cpp in Sources */,
+				EFCAE59A2396239D00A29102 /* LaserMine.cpp in Sources */,
 				924722AB1EF72947000B58FD /* Math.cpp in Sources */,
-				92B401B1223F2925004DD285 /* Random.cpp in Sources */,
 				928A32D41F97158D00E04B24 /* Mesh.cpp in Sources */,
+				EFCAE5992396239D00A29102 /* SecurityCone.cpp in Sources */,
+				EFCAE59B2396239D00A29102 /* PlayerMove.cpp in Sources */,
 				924722BE1EF98571000B58FD /* CollisionComponent.cpp in Sources */,
-				EFCAE56B238754A100A29102 /* Block.cpp in Sources */,
-				EFCAE56C238754A100A29102 /* CameraComponent.cpp in Sources */,
-				EFCAE568238754A100A29102 /* PlayerMove.cpp in Sources */,
-				EFCAE569238754A100A29102 /* Player.cpp in Sources */,
-				92B401B0223F2925004DD285 /* SegmentCast.cpp in Sources */,
-				EFCAE56A238754A100A29102 /* LaserMine.cpp in Sources */,
 				92E32AAC1F9D67450091853F /* LevelLoader.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

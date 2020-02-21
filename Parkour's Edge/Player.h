@@ -11,4 +11,5 @@ private:
     class CameraComponent* mCaC;
     class CollisionComponent* mCC;
     Vector3 mRespawn;
+    class HUD* mHUD;
 };

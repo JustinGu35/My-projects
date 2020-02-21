@@ -17,6 +17,8 @@
 #include <sstream>
 #include "Checkpoint.h"
 #include "Arrow.h"
+#include "SecurityCamera.h"
+#include <SDL/SDL_ttf.h>
 
 Game::Game()
 :mIsRunning(true)
@@ -48,6 +50,7 @@ bool Game::Initialize()
 	Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048);
     Mix_AllocateChannels(32);
     Mix_GroupChannels(22,31,1);
+    TTF_Init();
 	LoadData();
     
     SDL_SetRelativeMouseMode(SDL_TRUE); // Enable relative mouse mode
@@ -243,7 +246,7 @@ void Game::AddBlock(class Actor* inBlock)
 {
     mBlocks.push_back(inBlock);
 }
-void Game::Remove(class Actor* outBlock)
+void Game::RemoveBlock(class Actor* outBlock)
 {
     auto it=std::find(mBlocks.begin(),mBlocks.end(),outBlock);
     if(it!=mBlocks.end())
@@ -270,4 +273,18 @@ void Game::LoadNextLevel()
     }
     mArrow=new Arrow(this,nullptr);
     mNextLevel.clear();
+}
+
+
+void Game::AddSecurityCamera(SecurityCamera* inSC)
+{
+    mSecurityCameras.push_back(inSC);
+}
+void Game::RemoveSecurityCamera(SecurityCamera* outSC)
+{
+    auto it=std::find(mSecurityCameras.begin(),mSecurityCameras.end(),outSC);
+    if(it!=mSecurityCameras.end())
+    {
+        mSecurityCameras.erase(it);
+    }
 }

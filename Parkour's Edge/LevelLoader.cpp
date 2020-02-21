@@ -74,6 +74,11 @@ void LoadActor(const rapidjson::Value& actorValue, Game* game, Actor* parent)
             {
                 checkpoint->SetLevel(level);
             }
+            std::string text;
+            if (GetStringFromJSON(actorValue, "text", text))
+            {
+                checkpoint->SetText(text);
+            }
         }
         else if (type=="Coin")
         {

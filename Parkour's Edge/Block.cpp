@@ -18,7 +18,7 @@ Block::Block(Game* inGame,Actor* parent)
 
 Block::~Block()
 {
-    mGame->Remove(this);
+    mGame->RemoveBlock(this);
 }
 
 void Block::OnUpdate(float deltaTime)

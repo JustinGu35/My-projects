@@ -28,11 +28,24 @@ public:
     void SetPlayer(class Player* inPlayer){mPlayer=inPlayer;}
     
     void AddBlock(class Actor* inBlock);
-    void Remove(class Actor* outBlock);
+    void RemoveBlock(class Actor* outBlock);
     std::vector<class Actor*>& GetBlocks(){return mBlocks;}
     std::queue<class Checkpoint*> mCheckpoints;
     void SetNextLevel(std::string inS){mNextLevel=inS;}
     void LoadNextLevel();
+    
+    void AddTime(float deltaTime){time+=deltaTime;}
+    float GetTime(){return time;}
+    void Addcoins(){coins++;}
+    int Getcoins(){return coins;}
+    void SetTextTimer(float inT){textTimer=inT;}
+    float GetTextTimer(){return textTimer;}
+    void SetDisplayText(std::string inS){displayText=inS;}
+    std::string GetDisplayText(){return displayText;}
+    
+    void AddSecurityCamera(class SecurityCamera* inSC);
+    void RemoveSecurityCamera(class SecurityCamera* outSC);
+    std::vector<class SecurityCamera*>& GetSecurityCameras(){return mSecurityCameras;}
 private:
 	void ProcessInput();
 	void UpdateGame();
@@ -54,4 +67,11 @@ private:
     std::vector<class Actor*> mBlocks;
     std::string mNextLevel;
     class Arrow* mArrow;
+    
+    float time=0;
+    int coins=0;
+    std::string displayText = "";
+    float textTimer=0;
+    
+    std::vector<class SecurityCamera*> mSecurityCameras;
 };
