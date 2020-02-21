@@ -1,6 +1,6 @@
 # My-projects
 
-Zelda / Parkour: open with Xcode by clicking the project file on Mac,
+Zelda / Parkour: open with Xcode by clicking the project file on Mac (preferred),
                   or Visual studio with workflow "Game development with C++"
 
 Avatar : open with Maya 2016

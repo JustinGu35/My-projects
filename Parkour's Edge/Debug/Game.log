@@ -1,22 +1,4 @@
-﻿  Actor.cpp
-  CollisionComponent.cpp
-  Component.cpp
-  Game.cpp
-  LevelLoader.cpp
-  Main.cpp
-  Math.cpp
-  Mesh.cpp
-  MeshComponent.cpp
-  MoveComponent.cpp
-  Random.cpp
-  Renderer.cpp
-  SegmentCast.cpp
-  Shader.cpp
-  Texture.cpp
-  UIComponent.cpp
-  VertexArray.cpp
-  Generating Code...
-Game.obj : error LNK2019: unresolved external symbol "public: void __thiscall Checkpoint::SetActive(bool)" (?SetActive@Checkpoint@@QAEX_N@Z) referenced in function "private: void __thiscall Game::LoadData(void)" (?LoadData@Game@@AAEXXZ)
+﻿Game.obj : error LNK2019: unresolved external symbol "public: void __thiscall Checkpoint::SetActive(bool)" (?SetActive@Checkpoint@@QAEX_N@Z) referenced in function "private: void __thiscall Game::LoadData(void)" (?LoadData@Game@@AAEXXZ)
 Game.obj : error LNK2019: unresolved external symbol "public: __thiscall Arrow::Arrow(class Game *,class Actor *)" (??0Arrow@@QAE@PAVGame@@PAVActor@@@Z) referenced in function "private: void __thiscall Game::LoadData(void)" (?LoadData@Game@@AAEXXZ)
 LevelLoader.obj : error LNK2019: unresolved external symbol "public: __thiscall Block::Block(class Game *,class Actor *)" (??0Block@@QAE@PAVGame@@PAVActor@@@Z) referenced in function "void __cdecl LoadActor(class rapidjson::GenericValue<struct rapidjson::UTF8<char>,class rapidjson::MemoryPoolAllocator<class rapidjson::CrtAllocator> > const &,class Game *,class Actor *)" (?LoadActor@@YAXABV?$GenericValue@U?$UTF8@D@rapidjson@@V?$MemoryPoolAllocator@VCrtAllocator@rapidjson@@@2@@rapidjson@@PAVGame@@PAVActor@@@Z)
 LevelLoader.obj : error LNK2019: unresolved external symbol "public: __thiscall Player::Player(class Game *,class Actor *)" (??0Player@@QAE@PAVGame@@PAVActor@@@Z) referenced in function "void __cdecl LoadActor(class rapidjson::GenericValue<struct rapidjson::UTF8<char>,class rapidjson::MemoryPoolAllocator<class rapidjson::CrtAllocator> > const &,class Game *,class Actor *)" (?LoadActor@@YAXABV?$GenericValue@U?$UTF8@D@rapidjson@@V?$MemoryPoolAllocator@VCrtAllocator@rapidjson@@@2@@rapidjson@@PAVGame@@PAVActor@@@Z)
