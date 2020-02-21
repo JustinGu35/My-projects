@@ -1,0 +1,27 @@
+﻿  Actor.cpp
+  CollisionComponent.cpp
+  Component.cpp
+  Game.cpp
+  LevelLoader.cpp
+  Main.cpp
+  Math.cpp
+  Mesh.cpp
+  MeshComponent.cpp
+  MoveComponent.cpp
+  Random.cpp
+  Renderer.cpp
+  SegmentCast.cpp
+  Shader.cpp
+  Texture.cpp
+  UIComponent.cpp
+  VertexArray.cpp
+  Generating Code...
+Game.obj : error LNK2019: unresolved external symbol "public: void __thiscall Checkpoint::SetActive(bool)" (?SetActive@Checkpoint@@QAEX_N@Z) referenced in function "private: void __thiscall Game::LoadData(void)" (?LoadData@Game@@AAEXXZ)
+Game.obj : error LNK2019: unresolved external symbol "public: __thiscall Arrow::Arrow(class Game *,class Actor *)" (??0Arrow@@QAE@PAVGame@@PAVActor@@@Z) referenced in function "private: void __thiscall Game::LoadData(void)" (?LoadData@Game@@AAEXXZ)
+LevelLoader.obj : error LNK2019: unresolved external symbol "public: __thiscall Block::Block(class Game *,class Actor *)" (??0Block@@QAE@PAVGame@@PAVActor@@@Z) referenced in function "void __cdecl LoadActor(class rapidjson::GenericValue<struct rapidjson::UTF8<char>,class rapidjson::MemoryPoolAllocator<class rapidjson::CrtAllocator> > const &,class Game *,class Actor *)" (?LoadActor@@YAXABV?$GenericValue@U?$UTF8@D@rapidjson@@V?$MemoryPoolAllocator@VCrtAllocator@rapidjson@@@2@@rapidjson@@PAVGame@@PAVActor@@@Z)
+LevelLoader.obj : error LNK2019: unresolved external symbol "public: __thiscall Player::Player(class Game *,class Actor *)" (??0Player@@QAE@PAVGame@@PAVActor@@@Z) referenced in function "void __cdecl LoadActor(class rapidjson::GenericValue<struct rapidjson::UTF8<char>,class rapidjson::MemoryPoolAllocator<class rapidjson::CrtAllocator> > const &,class Game *,class Actor *)" (?LoadActor@@YAXABV?$GenericValue@U?$UTF8@D@rapidjson@@V?$MemoryPoolAllocator@VCrtAllocator@rapidjson@@@2@@rapidjson@@PAVGame@@PAVActor@@@Z)
+LevelLoader.obj : error LNK2019: unresolved external symbol "public: __thiscall LaserMine::LaserMine(class Game *,class Actor *)" (??0LaserMine@@QAE@PAVGame@@PAVActor@@@Z) referenced in function "void __cdecl LoadActor(class rapidjson::GenericValue<struct rapidjson::UTF8<char>,class rapidjson::MemoryPoolAllocator<class rapidjson::CrtAllocator> > const &,class Game *,class Actor *)" (?LoadActor@@YAXABV?$GenericValue@U?$UTF8@D@rapidjson@@V?$MemoryPoolAllocator@VCrtAllocator@rapidjson@@@2@@rapidjson@@PAVGame@@PAVActor@@@Z)
+LevelLoader.obj : error LNK2019: unresolved external symbol "public: __thiscall Checkpoint::Checkpoint(class Game *,class Actor *)" (??0Checkpoint@@QAE@PAVGame@@PAVActor@@@Z) referenced in function "void __cdecl LoadActor(class rapidjson::GenericValue<struct rapidjson::UTF8<char>,class rapidjson::MemoryPoolAllocator<class rapidjson::CrtAllocator> > const &,class Game *,class Actor *)" (?LoadActor@@YAXABV?$GenericValue@U?$UTF8@D@rapidjson@@V?$MemoryPoolAllocator@VCrtAllocator@rapidjson@@@2@@rapidjson@@PAVGame@@PAVActor@@@Z)
+LevelLoader.obj : error LNK2019: unresolved external symbol "public: __thiscall Coin::Coin(class Game *,class Actor *)" (??0Coin@@QAE@PAVGame@@PAVActor@@@Z) referenced in function "void __cdecl LoadActor(class rapidjson::GenericValue<struct rapidjson::UTF8<char>,class rapidjson::MemoryPoolAllocator<class rapidjson::CrtAllocator> > const &,class Game *,class Actor *)" (?LoadActor@@YAXABV?$GenericValue@U?$UTF8@D@rapidjson@@V?$MemoryPoolAllocator@VCrtAllocator@rapidjson@@@2@@rapidjson@@PAVGame@@PAVActor@@@Z)
+LevelLoader.obj : error LNK2019: unresolved external symbol "public: __thiscall SecurityCamera::SecurityCamera(class Game *,class Actor *)" (??0SecurityCamera@@QAE@PAVGame@@PAVActor@@@Z) referenced in function "void __cdecl LoadActor(class rapidjson::GenericValue<struct rapidjson::UTF8<char>,class rapidjson::MemoryPoolAllocator<class rapidjson::CrtAllocator> > const &,class Game *,class Actor *)" (?LoadActor@@YAXABV?$GenericValue@U?$UTF8@D@rapidjson@@V?$MemoryPoolAllocator@VCrtAllocator@rapidjson@@@2@@rapidjson@@PAVGame@@PAVActor@@@Z)
+C:\Users\Tong\Documents\GitHub\My-projects\Parkour's Edge\Debug\Game.exe : fatal error LNK1120: 8 unresolved externals
